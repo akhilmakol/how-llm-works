@@ -2,6 +2,8 @@
 
 `how-llm-works` is a visual and interactive educational repository that explains how a GPT-style large language model works from first principles.
 
+![Project overview](visuals/cover.png)
+
 The project combines:
 
 - a clean mini GPT implementation in PyTorch
@@ -33,6 +35,8 @@ This project implements a minimal GPT-style language model:
 4. Causal self-attention lets each token look back at previous tokens.
 5. Transformer blocks refine representations using attention, feed-forward layers, residual connections, and layer normalization.
 6. A final linear layer predicts the next token.
+
+![LLM pipeline](visuals/pipeline.png)
 
 ## Setup
 
@@ -70,7 +74,7 @@ If `model.pth` does not exist, the app automatically trains a fresh model before
 
 ## Visual References
 
-The `visuals/` directory contains text placeholders that describe the diagrams to create later:
+The `visuals/` directory contains lightweight diagram assets that reinforce the core concepts:
 
 - `cover.png`
 - `pipeline.png`
@@ -80,6 +84,10 @@ The `visuals/` directory contains text placeholders that describe the diagrams t
 - `transformer.png`
 - `training.png`
 - `inference.png`
+
+Preview:
+
+![Attention diagram](visuals/attention.png)
 
 ## Testing
 

@@ -1,5 +1,7 @@
 # 6. Inference
 
+![Inference diagram](../visuals/inference.png)
+
 Inference means using the trained model to generate new text.
 
 ## Autoregressive Generation

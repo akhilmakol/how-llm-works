@@ -1,5 +1,7 @@
 # 5. Training
 
+![Training diagram](../visuals/training.png)
+
 Training teaches the model to predict the next token.
 
 ## Training Data

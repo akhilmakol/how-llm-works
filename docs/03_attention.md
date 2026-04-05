@@ -1,5 +1,7 @@
 # 3. Attention
 
+![Attention diagram](../visuals/attention.png)
+
 Attention is the mechanism that made transformers successful.
 
 ## Intuition

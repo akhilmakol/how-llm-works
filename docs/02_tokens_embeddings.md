@@ -1,5 +1,7 @@
 # 2. Tokens And Embeddings
 
+![Tokenization diagram](../visuals/tokenization.png)
+
 Computers do not read raw sentences the way humans do. They work with numbers.
 
 ## Tokens
@@ -19,6 +21,8 @@ Tokens:
 Each token is mapped to an integer ID.
 
 ## Embeddings
+
+![Embeddings diagram](../visuals/embeddings.png)
 
 A token ID by itself is just a label. An embedding turns that label into a learned vector.
 

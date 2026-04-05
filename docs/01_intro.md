@@ -1,5 +1,7 @@
 # 1. Introduction
 
+![How LLM Works overview](../visuals/cover.png)
+
 Large Language Models, or LLMs, are systems that learn to predict the next token in a sequence.
 
 That sounds simple, but it becomes powerful when the model sees lots of text and learns patterns such as:

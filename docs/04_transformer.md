@@ -1,5 +1,7 @@
 # 4. Transformer Blocks
 
+![Transformer block diagram](../visuals/transformer.png)
+
 A transformer block combines attention with a small neural network called a feed-forward network.
 
 ## Main Parts

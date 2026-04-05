@@ -1,5 +1,7 @@
 # 8. Real-World LLMs
 
+![Pipeline diagram](../visuals/pipeline.png)
+
 Modern production LLMs build on the same basic transformer ideas, but at much larger scale.
 
 ## What Changes In Real Systems
