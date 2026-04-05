@@ -89,14 +89,14 @@ python -m unittest discover -s tests -v
 
 ## Learning Path
 
-1. [docs/01_intro.md](/C:/dev/how-llm-works/docs/01_intro.md)
-2. [docs/02_tokens_embeddings.md](/C:/dev/how-llm-works/docs/02_tokens_embeddings.md)
-3. [docs/03_attention.md](/C:/dev/how-llm-works/docs/03_attention.md)
-4. [docs/04_transformer.md](/C:/dev/how-llm-works/docs/04_transformer.md)
-5. [docs/05_training.md](/C:/dev/how-llm-works/docs/05_training.md)
-6. [docs/06_inference.md](/C:/dev/how-llm-works/docs/06_inference.md)
-7. [docs/07_limitations.md](/C:/dev/how-llm-works/docs/07_limitations.md)
-8. [docs/08_real_world_llms.md](/C:/dev/how-llm-works/docs/08_real_world_llms.md)
+1. [Introduction](docs/01_intro.md)
+2. [Tokens And Embeddings](docs/02_tokens_embeddings.md)
+3. [Attention](docs/03_attention.md)
+4. [Transformer Blocks](docs/04_transformer.md)
+5. [Training](docs/05_training.md)
+6. [Inference](docs/06_inference.md)
+7. [Limitations](docs/07_limitations.md)
+8. [Real-World LLMs](docs/08_real_world_llms.md)
 
 ## License
 
