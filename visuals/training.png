@@ -1,0 +1,2 @@
+Placeholder diagram specification:
+Show input-target token windows, loss calculation with cross entropy, backpropagation, and parameter updates over epochs.

@@ -1,0 +1,2 @@
+Placeholder diagram specification:
+Show query, key, and value vectors with arrows between tokens and a masked attention matrix highlighting causal attention.

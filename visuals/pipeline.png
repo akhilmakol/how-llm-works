@@ -1,0 +1,2 @@
+Placeholder diagram specification:
+Illustrate the full pipeline from raw text to tokens, embeddings, attention layers, next-token prediction, training loop, saved model, and Streamlit demo.

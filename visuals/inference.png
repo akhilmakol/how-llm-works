@@ -1,0 +1,2 @@
+Placeholder diagram specification:
+Show autoregressive generation where the prompt grows one token at a time with greedy argmax decoding.
