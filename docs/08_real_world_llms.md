@@ -33,7 +33,7 @@ This project:
 
 A production LLM:
 
-- internet-scale or curated large corpora
+- internet-scale or curated large corpora, including domain text such as banking filings, research, and policy documents
 - billions of parameters
 - sophisticated decoding and alignment methods
 

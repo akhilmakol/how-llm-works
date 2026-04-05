@@ -17,7 +17,7 @@ The model may:
 - repeat phrases
 - produce short or narrow outputs
 - fail on unfamiliar prompts
-- memorize patterns from the sample text
+- memorize patterns from the sample text, including repeated banking terms if the corpus is domain-heavy
 
 ## Why This Is Still Useful
 

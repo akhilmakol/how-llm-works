@@ -55,7 +55,7 @@ python src/train.py
 ## Run Generation
 
 ```bash
-python src/generate.py --prompt "large language models"
+python src/generate.py --prompt "banks manage credit"
 ```
 
 ## Run The Streamlit Demo

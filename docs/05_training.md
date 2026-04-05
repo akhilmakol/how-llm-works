@@ -12,11 +12,11 @@ Example:
 
 Input:
 
-`["large", "language", "models"]`
+`["net", "interest", "margin"]`
 
 Target:
 
-`["language", "models", "learn"]`
+`["interest", "margin", "improved"]`
 
 Each target token is just the next token shifted by one position.
 
@@ -34,4 +34,4 @@ Over time, the model becomes better at predicting likely continuations.
 
 ## Example
 
-If the model predicts `birds` when the correct token is `models`, the loss increases and backpropagation nudges the weights toward better predictions.
+If the model predicts `capital` when the correct token is `margin`, the loss increases and backpropagation nudges the weights toward better predictions.

@@ -10,9 +10,9 @@ When predicting the next token, not every earlier token matters equally.
 
 In the phrase:
 
-`the animal did not cross the road because it was tired`
+`the borrower missed a payment because the loan rate increased`
 
-the word `it` should probably pay attention to `animal`.
+the words `loan rate` should matter strongly when interpreting why the payment was missed.
 
 ## Query, Key, Value
 
@@ -42,6 +42,6 @@ So token 4 can attend to tokens 1 to 4, but not token 5 or later.
 
 For:
 
-`the cat sat`
+`the bank lends`
 
-the token `sat` may attend strongly to `cat` and `the`.
+the token `lends` may attend strongly to `bank`.

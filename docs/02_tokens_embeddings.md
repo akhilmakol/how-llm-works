@@ -12,11 +12,11 @@ In this repository, we use a simple word-level tokenizer.
 
 Example sentence:
 
-`Transformers are powerful models.`
+`Banks earn interest income.`
 
 Tokens:
 
-`["transformers", "are", "powerful", "models", "."]`
+`["banks", "earn", "interest", "income", "."]`
 
 Each token is mapped to an integer ID.
 
@@ -34,7 +34,7 @@ Why do this?
 
 ## Positional Information
 
-Words also need order. `dog bites man` is different from `man bites dog`.
+Words also need order. `banks issue loans` is different from `loans issue banks`.
 
 The model adds positional embeddings so each token knows where it appears in the sequence.
 
@@ -42,7 +42,7 @@ The model adds positional embeddings so each token knows where it appears in the
 
 Token IDs:
 
-`[12, 5, 9, 2]`
+`[14, 7, 11, 5]`
 
 Embedded vectors:
 

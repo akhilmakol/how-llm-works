@@ -15,11 +15,11 @@ That sounds simple, but it becomes powerful when the model sees lots of text and
 
 If the model sees:
 
-`the sky is`
+`a bank earns`
 
 it tries to predict a likely next token such as:
 
-`blue`
+`interest`
 
 During training, the model makes millions of these guesses and improves when it is wrong.
 
@@ -36,10 +36,10 @@ Real LLMs are large and complex. This project uses a tiny GPT-style model so you
 
 Input:
 
-`language models learn patterns`
+`banks collect deposits`
 
 Possible next token:
 
-`from`
+`and`
 
 The model does not understand language like a human. It learns statistical patterns from data.

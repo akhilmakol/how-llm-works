@@ -29,16 +29,16 @@ This is simple and deterministic.
 
 Prompt:
 
-`attention helps`
+`a bank manages`
 
 Generated token 1:
 
-`models`
+`credit`
 
 Generated token 2:
 
-`focus`
+`risk`
 
 The final output becomes:
 
-`attention helps models focus`
+`a bank manages credit risk`

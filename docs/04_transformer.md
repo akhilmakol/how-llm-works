@@ -31,4 +31,4 @@ This makes deep networks easier to train.
 
 ## Example
 
-If the input token representation captures a word identity, the attention layer can add context and the feed-forward layer can refine it further.
+If the input token representation captures a banking term such as `deposit`, the attention layer can connect it with nearby context such as `interest` or `liquidity`, and the feed-forward layer can refine that meaning further.

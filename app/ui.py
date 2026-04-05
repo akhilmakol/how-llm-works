@@ -70,7 +70,7 @@ def main() -> None:
 
     with tab_generate:
         st.subheader("Generate text")
-        prompt = st.text_input("Prompt", value="Large language models")
+        prompt = st.text_input("Prompt", value="Banks manage credit")
         max_new_tokens = st.slider("Tokens to generate", min_value=5, max_value=40, value=20)
         if st.button("Generate", type="primary"):
             generated = generate_text(
@@ -84,7 +84,7 @@ def main() -> None:
         st.subheader("Explore word-level tokenization")
         raw_text = st.text_area(
             "Input text",
-            value="Transformers read text as tokens, not as raw characters.",
+            value="Banks read customer transactions as structured records, not as raw documents.",
             height=120,
         )
         tokens = tokenizer.tokenize(raw_text)
@@ -100,7 +100,7 @@ def main() -> None:
         st.subheader("Inspect causal self-attention")
         attention_text = st.text_input(
             "Text for attention map",
-            value="attention lets each token look at earlier tokens",
+            value="a bank reviews borrower cash flow before approving credit",
         )
         st.caption("This heatmap uses real model attention from the final transformer layer.")
         render_attention_heatmap(model, tokenizer, attention_text)
