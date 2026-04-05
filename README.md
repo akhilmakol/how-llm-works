@@ -1,124 +1,69 @@
 # How LLM Works
 
-`how-llm-works` is a visual and interactive educational repository that explains how a GPT-style large language model works from first principles.
+A visual, interactive, and beginner-friendly repository for understanding how GPT-style large language models work from first principles.
 
 ![Project overview](visuals/cover.png)
 
-The project combines:
+## Overview
 
-- a clean mini GPT implementation in PyTorch
-- beginner-friendly documentation with simple examples
-- a Streamlit app for text generation, token exploration, and attention visualization
-- a tiny end-to-end training and inference pipeline that runs on a sample corpus
+`how-llm-works` is an educational open source project that combines:
 
-## Repository Overview
+- a minimal GPT-style model implemented in PyTorch
+- visual diagrams for core LLM concepts
+- guided documentation from tokenization to inference
+- a Streamlit app for interactive exploration
+- a small end-to-end training and generation pipeline
+
+The project is intentionally compact, but the architecture is faithful to the main ideas behind real transformer language models.
+
+## Features
+
+- Word-level tokenizer with vocabulary building and encode/decode support
+- Token and positional embeddings
+- Causal multi-head self-attention
+- Transformer blocks with residual connections and layer normalization
+- Next-token training with cross-entropy loss
+- Greedy autoregressive text generation
+- Streamlit UI with:
+  - text generation
+  - tokenization explorer
+  - attention heatmap visualization
+- Banking-themed examples across docs, notebooks, and demo prompts
+
+## Demo Visuals
+
+![Pipeline diagram](visuals/pipeline.png)
+
+![Attention diagram](visuals/attention.png)
+
+## Repository Structure
 
 ```text
 how-llm-works/
 |- app/         # Streamlit interface
-|- src/         # Core tokenizer, attention, transformer, training, generation
-|- docs/        # Learning notes from intuition to real-world LLMs
-|- visuals/     # Diagram assets used across the docs and README
+|- src/         # Core tokenizer, model, training, and generation logic
+|- docs/        # Beginner-friendly tutorials and explanations
+|- visuals/     # Diagram assets used throughout the project
 |- data/        # Sample banking-themed training corpus
-|- notebooks/   # Small exploratory notebooks
-|- tests/       # Unit tests using unittest
-`- assets/      # Portfolio and publishing assets
+|- notebooks/   # Exploratory notebooks
+|- tests/       # Unit tests
+`- assets/      # Launch and publishing assets
 ```
 
 ## Architecture
 
-This project implements a minimal GPT-style language model:
+This repository implements a minimal GPT-style language model:
 
 1. Text is split into word-level tokens.
-2. Tokens are mapped to vectors with token embeddings.
-3. Positional embeddings tell the model where each token appears.
-4. Causal self-attention lets each token look back at previous tokens.
-5. Transformer blocks refine representations using attention, feed-forward layers, residual connections, and layer normalization.
-6. A final linear layer predicts the next token.
-
-![LLM pipeline](visuals/pipeline.png)
-
-## Setup
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-## Run Training
-
-```bash
-python src/train.py
-```
-
-## Run Generation
-
-```bash
-python src/generate.py --prompt "banks manage credit"
-```
-
-## Run The Streamlit Demo
-
-```bash
-streamlit run app/ui.py
-```
-
-The app includes:
-
-- `Text Generation`
-- `Tokenization Explorer`
-- `Attention Visualization`
-
-If `model.pth` does not exist, the app automatically trains a fresh model before loading the interface.
-
-## Deploy To Streamlit Community Cloud
-
-This repository is organized to work with Streamlit Community Cloud:
-
-- app entrypoint: `app/ui.py`
-- dependency file: `requirements.txt`
-- optional Streamlit config: `.streamlit/config.toml`
-
-Deployment steps:
-
-1. Push this repository to GitHub.
-2. Sign in to Streamlit Community Cloud.
-3. Create a new app and select your repository and branch.
-4. Set the entrypoint file path to `app/ui.py`.
-5. In advanced settings, pick the Python version that matches your local environment.
-6. Deploy the app.
-
-Notes:
-
-- Community Cloud runs `streamlit run` from the repository root, so this project keeps `requirements.txt` and `.streamlit/config.toml` at the root.
-- The app uses local project files from the repo, including `data/sample.txt`.
-- On first launch, the app will train `model.pth` automatically if it is not already present.
-
-## Visual References
-
-The `visuals/` directory contains lightweight diagram assets that reinforce the core concepts:
-
-- `cover.png`
-- `pipeline.png`
-- `tokenization.png`
-- `embeddings.png`
-- `attention.png`
-- `transformer.png`
-- `training.png`
-- `inference.png`
-
-Preview:
-
-![Attention diagram](visuals/attention.png)
-
-## Testing
-
-```bash
-python -m unittest discover -s tests -v
-```
+2. Tokens are converted to integer IDs.
+3. Token embeddings and positional embeddings create dense vector representations.
+4. Causal self-attention lets each token attend only to earlier tokens.
+5. Transformer blocks refine the hidden state.
+6. A final linear projection predicts the next token.
 
 ## Learning Path
+
+Read the docs in order:
 
 1. [Introduction](docs/01_intro.md)
 2. [Tokens And Embeddings](docs/02_tokens_embeddings.md)
@@ -129,6 +74,136 @@ python -m unittest discover -s tests -v
 7. [Limitations](docs/07_limitations.md)
 8. [Real-World LLMs](docs/08_real_world_llms.md)
 
+## Installation
+
+### Prerequisites
+
+- Python 3.10 or newer recommended
+- `pip`
+
+### Setup
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Train the model
+
+```bash
+python src/train.py
+```
+
+This trains the mini GPT model on `data/sample.txt` and saves a checkpoint as `model.pth`.
+
+### Generate text
+
+```bash
+python src/generate.py --prompt "banks manage credit"
+```
+
+### Run the Streamlit app
+
+```bash
+streamlit run app/ui.py
+```
+
+The app includes:
+
+- Text Generation
+- Tokenization Explorer
+- Attention Visualization
+
+If `model.pth` is missing, the app automatically trains a fresh model on startup.
+
+## Streamlit Community Cloud Deployment
+
+This repository is organized to work with Streamlit Community Cloud:
+
+- app entrypoint: `app/ui.py`
+- dependency file: `requirements.txt`
+- config file: `.streamlit/config.toml`
+
+Deployment steps:
+
+1. Push the repository to GitHub.
+2. Sign in to Streamlit Community Cloud.
+3. Create a new app from your GitHub repository.
+4. Choose the target branch.
+5. Set the main file path to `app/ui.py`.
+6. Deploy.
+
+## Testing
+
+Run the unit tests with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Current test coverage includes:
+
+- tokenizer encoding and decoding
+- attention output shapes
+- model forward-pass shapes
+
+## Documentation And Notebooks
+
+In addition to the docs, the repository includes notebooks for:
+
+- tokenization
+- embeddings
+- attention
+- transformer blocks
+- training
+- generation
+
+These are useful for experimentation and classroom-style walkthroughs.
+
+## Example Use Cases
+
+This project is a good fit for:
+
+- students learning transformers for the first time
+- educators teaching LLM fundamentals
+- developers who want a compact reference implementation
+- portfolio projects demonstrating AI education tooling
+
+## Limitations
+
+This is an educational mini-model, not a production LLM.
+
+Important constraints:
+
+- very small dataset
+- word-level tokenizer only
+- tiny model size
+- greedy decoding only
+- limited generalization beyond the sample corpus
+
+See [docs/07_limitations.md](docs/07_limitations.md) for more detail.
+
+## Contributing
+
+Contributions are welcome.
+
+Helpful contribution areas include:
+
+- improving explanations and examples
+- polishing diagrams and visuals
+- expanding tests
+- improving the Streamlit learning experience
+- adding optional experiments while keeping the beginner-friendly core
+
+If you plan a larger change, open an issue or discussion first so the direction stays aligned with the educational goals of the project.
+
 ## License
 
-This repository is released under the MIT License.
+This project is released under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+This repository was designed as a visual-first learning project to make LLM internals more approachable without hiding the real architecture.
