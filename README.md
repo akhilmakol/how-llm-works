@@ -72,6 +72,29 @@ The app includes:
 
 If `model.pth` does not exist, the app automatically trains a fresh model before loading the interface.
 
+## Deploy To Streamlit Community Cloud
+
+This repository is organized to work with Streamlit Community Cloud:
+
+- app entrypoint: `app/ui.py`
+- dependency file: `requirements.txt`
+- optional Streamlit config: `.streamlit/config.toml`
+
+Deployment steps:
+
+1. Push this repository to GitHub.
+2. Sign in to Streamlit Community Cloud.
+3. Create a new app and select your repository and branch.
+4. Set the entrypoint file path to `app/ui.py`.
+5. In advanced settings, pick the Python version that matches your local environment.
+6. Deploy the app.
+
+Notes:
+
+- Community Cloud runs `streamlit run` from the repository root, so this project keeps `requirements.txt` and `.streamlit/config.toml` at the root.
+- The app uses local project files from the repo, including `data/sample.txt`.
+- On first launch, the app will train `model.pth` automatically if it is not already present.
+
 ## Visual References
 
 The `visuals/` directory contains lightweight diagram assets that reinforce the core concepts:
