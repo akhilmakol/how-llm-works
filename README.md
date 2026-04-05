@@ -15,14 +15,14 @@ The project combines:
 
 ```text
 how-llm-works/
-├── app/         # Streamlit interface
-├── src/         # Core tokenizer, attention, transformer, training, generation
-├── docs/        # Learning notes from intuition to real-world LLMs
-├── visuals/     # Text placeholders describing diagrams to design later
-├── data/        # Sample training corpus
-├── notebooks/   # Small exploratory notebooks
-├── tests/       # Unit tests using unittest
-└── assets/      # Portfolio and publishing assets
+|- app/         # Streamlit interface
+|- src/         # Core tokenizer, attention, transformer, training, generation
+|- docs/        # Learning notes from intuition to real-world LLMs
+|- visuals/     # Diagram assets used across the docs and README
+|- data/        # Sample banking-themed training corpus
+|- notebooks/   # Small exploratory notebooks
+|- tests/       # Unit tests using unittest
+`- assets/      # Portfolio and publishing assets
 ```
 
 ## Architecture
